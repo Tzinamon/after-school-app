@@ -7,7 +7,6 @@ function HomePage(props) {
             <Container>
                 Home Page
             </Container>
-            
         </div>
     );
 }
