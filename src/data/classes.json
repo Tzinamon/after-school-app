@@ -1,0 +1,15 @@
+[
+    {
+        "classid": 10,
+        "cname": "judo",
+        "instructor": "Oren Smadga",
+        "description": "Japanese full contact martial art. Great for improving physical strength, coordination and self defense skills",
+        "schedday1": "Sunday",
+        "schedtime1": "16:00",
+        "schedday2": "Wednesday",
+        "schedtime2": "18:00",
+        "price": 180,
+        "room": "small gym"
+
+    }
+]

@@ -1,9 +1,10 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 
-function TopNav(props) {
+function TopNav({userRole}) {
     return (
         <div>
-            TopNav
+            <Container>TopNav</Container>
         </div>
     );
 }
