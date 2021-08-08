@@ -1,5 +1,3 @@
-
-
 class UserModel {
     constructor (plainUser){
         this.id = plainUser.id;

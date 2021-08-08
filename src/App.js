@@ -10,10 +10,11 @@ import HomePage from './pages/homepage/HomePage';
 import LoginPage from './pages/login/LoginPage';
 import jsonUsers from './data/users.json';
 import jsonClasses from './data/classes.json';
+import ClassModel from './Model/ClassModel';
 
 function App() {
 
-  const [users, setUsers] = useState(jsonUsers.map(plainUser => new UseRModel(plainUser)));
+  const [users, setUsers] = useState(jsonUsers.map(plainUser => new UserModel(plainUser)));
   const [classes, setClasses] = useState(jsonClasses.map(plainClass => new ClassModel(plainClass)));  
   const [userRole, setUserRole] = useState(new UserModel(     
     {

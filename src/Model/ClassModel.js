@@ -12,4 +12,3 @@ class ClassModel {
 
 export default ClassModel;
 
-
