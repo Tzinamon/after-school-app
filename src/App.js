@@ -12,8 +12,10 @@ import jsonUsers from './data/users.json';
 import jsonClasses from './data/classes.json';
 
 function App() {
+
   const [users, setUsers] = useState(jsonUsers.map(plainUser => new UseRModel(plainUser)));
-  const [userRole, setUserRole] = useState(new UserModel(
+  const [classes, setClasses] = useState(jsonClasses.map(plainClass => new ClassModel(plainClass)));  
+  const [userRole, setUserRole] = useState(new UserModel(     
     {
       id : "1",
       fname : "John",
@@ -21,8 +23,7 @@ function App() {
       email : "johndoe@gmail.com",
       role : "manager",
       password : "12345"
-  }
-  ));
+  }));
 
   // const [userRole, setUserRole] = useState(new UserModel(
   //   {

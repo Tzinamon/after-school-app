@@ -1,15 +1,77 @@
 [
     {
         "classid": 10,
-        "cname": "judo",
+        "cname": "Judo",
         "instructor": "Oren Smadga",
         "description": "Japanese full contact martial art. Great for improving physical strength, coordination and self defense skills",
-        "schedday1": "Sunday",
-        "schedtime1": "16:00",
-        "schedday2": "Wednesday",
-        "schedtime2": "18:00",
+        "schedule": [{"day": "Sunday", "time": "16:00"},{"day":"Wednesday", "time": "18:00"}],
         "price": 180,
         "room": "small gym"
 
+    },
+    {
+        "classid": 12,
+        "cname": "Computers",
+        "instructor": "Nir Channes",
+        "description": "HTML, CSS JavaScript and React JS",
+        "schedule": [{"day": "Tuesday", "time": "16:00"}],
+        "price": 180,
+        "room": "Computer Lab"
+
+    },
+    {
+        "classid": 13,
+        "cname": "Robotics",
+        "instructor": "Optimus Prime",
+        "description": "Programmming and building robots",
+        "schedule": [{"day": "Tuesday", "time": "17:00"}],
+        "price": 2000,
+        "room": "Room 113A"
+
+    },
+    {
+        "classid": 14,
+        "cname": "Arts and Crafts 1",
+        "instructor": "Salvador Dali",
+        "description": "Drawing, painting and craft projects",
+        "schedule": [{"day": "Sunday", "time": "16:00"}],
+        "price": 180,
+        "room": "Art Room"
+    },
+    {
+        "classid": 15,
+        "cname": "Arts and Crafts 2",
+        "instructor": "Salvador Dali",
+        "description": "Drawing, painting and craft projects",
+        "schedule": [{"day": "Sunday", "time": "17:00"}],
+        "price": 180,
+        "room": "Art Room"
+    },
+    {
+        "classid": 16,
+        "cname": "Lego beginners",
+        "instructor": "Amir Asor",
+        "description": "Build fum Lego projects",
+        "schedule": [{"day": "Monday", "time": "16:00"}],
+        "price": 180,
+        "room": "Room 113A"
+    },
+    {
+        "classid": 17,
+        "cname": "Lego Advanced",
+        "instructor": "Amir Asor",
+        "description": "Build fum Lego projects",
+        "schedule": [{"day": "Monday", "time": "17:00"}],
+        "price": 180,
+        "room": "Room 113A"
+    },
+    {
+        "classid": 18,
+        "cname": "Dance",
+        "instructor": "Alvin Tadmor",
+        "description": "modern dance",
+        "schedule": [{"day": "Monday", "time": "17:00"}],
+        "price": 180,
+        "room": "Studio"
     }
 ]
