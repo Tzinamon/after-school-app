@@ -41,7 +41,7 @@ function App() {
     <div >
         <HashRouter>
           <Switch>
-            <Route exact path="/"><HomePage userRole={userRole}/></Route>
+            <Route exact path="/"><HomePage userRole={userRole} classes={classes}/></Route>
             <Route exact path="/login"><LoginPage/></Route>
             <Route exact path="/dashboard">
               <TopNav userRole={userRole}/>

@@ -1,9 +1,16 @@
 import React from 'react';
+import './Day.css';
+import ClassBox from '../ClassBox/ClassBox';
 
-function Day(props) {
+function Day({userRole, classes, weekday}) {
+
+    const classBoxes = classes.map(Class => 
+        <ClassBox Class={Class}/>
+      );
     return (
         <div>
-            Day
+            <div className= "d-title">{weekday}</div>
+            <div>{classBoxes}</div>
         </div>
     );
 }
