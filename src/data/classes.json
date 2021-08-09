@@ -1,77 +1,77 @@
 [
     {
         "classid": 10,
-        "cname": "Judo",
-        "instructor": "Oren Smadga",
-        "description": "Japanese full contact martial art. Great for improving physical strength, coordination and self defense skills",
-        "schedule": [{"day": "Sunday", "time": "16:00"},{"day":"Wednesday", "time": "18:00"}],
+        "cname": "ג'ודו",
+        "instructor": "turi xnsdwv",
+        "description": " אומנות לחימה יפנית שהפכה לספורט אולימפי. החוג מפתח את הכושר הגופני, הביטחון העצמי והמשמעת",
+        "schedule": [{"day": "ראשון", "time": "16:00"},{"day":"רביעי", "time": "18:00"}],
         "price": 180,
-        "room": "small gym"
+        "room": "אולם קטן"
 
     },
     {
         "classid": 12,
-        "cname": "Computers",
-        "instructor": "Nir Channes",
-        "description": "HTML, CSS JavaScript and React JS",
-        "schedule": [{"day": "Tuesday", "time": "16:00"}],
+        "cname": "מחשבים",
+        "instructor": "ניר חנס",
+        "description": "בחוג נלמד HTML, CSS וריאקט ונעשה תרגילים ופרוייקטים",
+        "schedule": [{"day": "שלישי", "time": "16:00"}],
         "price": 180,
-        "room": "Computer Lab"
+        "room": "חדר מחשבים"
 
     },
     {
         "classid": 13,
-        "cname": "Robotics",
-        "instructor": "Optimus Prime",
-        "description": "Programmming and building robots",
-        "schedule": [{"day": "Tuesday", "time": "17:00"}],
+        "cname": "רובוטיקה",
+        "instructor": "אופטימוס פריים",
+        "description": "בנייה ותכנות של רובוטים מגניבים",
+        "schedule": [{"day": "שלישי", "time": "17:00"}],
         "price": 2000,
-        "room": "Room 113A"
+        "room": "חדר 113"
 
     },
     {
         "classid": 14,
-        "cname": "Arts and Crafts 1",
-        "instructor": "Salvador Dali",
-        "description": "Drawing, painting and craft projects",
-        "schedule": [{"day": "Sunday", "time": "16:00"}],
+        "cname": "יצירה א-ב",
+        "instructor": "יאיר גרבוז",
+        "description": "רישום, ציור ויצירה בחומרים שונים",
+        "schedule": [{"day": "ראשון", "time": "16:00"}],
         "price": 180,
-        "room": "Art Room"
+        "room": "חדר אומנות"
     },
     {
         "classid": 15,
-        "cname": "Arts and Crafts 2",
-        "instructor": "Salvador Dali",
-        "description": "Drawing, painting and craft projects",
-        "schedule": [{"day": "Sunday", "time": "17:00"}],
+        "cname": "יצירה ג-ד",
+        "instructor": "יאיר גרבוז",
+        "description": "רישום, ציור ויצירה בחומרים שונים",
+        "schedule": [{"day": "ראשון", "time": "17:00"}],
         "price": 180,
-        "room": "Art Room"
+        "room": "חדר אומנות"
     },
     {
         "classid": 16,
-        "cname": "Lego beginners",
-        "instructor": "Amir Asor",
-        "description": "Build fum Lego projects",
-        "schedule": [{"day": "Monday", "time": "16:00"}],
+        "cname": "לגו מתחילים",
+        "instructor": "אמיר עשור",
+        "description": "לימוד של עקרונות מדעיים והנדסיים ובניית דגמי לגו שממחישים את הנלמד",
+        "schedule": [{"day": "שני", "time": "16:00"}],
         "price": 180,
-        "room": "Room 113A"
+        "room": "חדר 113"
     },
     {
         "classid": 17,
-        "cname": "Lego Advanced",
-        "instructor": "Amir Asor",
-        "description": "Build fum Lego projects",
-        "schedule": [{"day": "Monday", "time": "17:00"}],
+        "cname": "לגו מתקדמים",
+        "instructor": "אמיר עשור",
+        "description": "לימוד של עקרונות מדעיים והנדסיים ובניית דגמי לגו שממחישים את הנלמד",
+        "schedule": [{"day": "שני", "time": "17:00"}],
         "price": 180,
-        "room": "Room 113A"
+        "room": "חדר 113"
     },
     {
         "classid": 18,
-        "cname": "Dance",
-        "instructor": "Alvin Tadmor",
-        "description": "modern dance",
-        "schedule": [{"day": "Monday", "time": "17:00"}],
+        "cname": "מחול",
+        "instructor": "דני רקדני",
+        "description": "מחול מודרני, ג'אז וקצת היפ הופ",
+        "schedule": [{"day": "שני", "time": "17:00"}],
         "price": 180,
-        "room": "Studio"
+        "room": "סטודיו"
     }
 ]
