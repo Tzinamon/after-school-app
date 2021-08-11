@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import ClassCard from "../ClassCard/classcard";
+import ClassCard from "../ClassCard/ClassCard";
 import "./ClassBox.css";
 
-function ClassBox({ classes, Class }) {
-  const [isDisplayed, setIsDisplayed] = useState(false);
+function ClassBox({classes, Class }) {
+  const [showCard, setShowCard] = useState(false);
 
   return (
-    <div>
-      <div key={Class.classid} className="default-box">
+    <div >
+      <button onClick={()=>setShowCard(!showCard)} key={Class.classid} className="default-box">
         <div>{Class.schedule[0].time}</div>
         {Class.cname}
-      </div>
-      <div>
-        <ClassCard Class={Class} />
+      </button>
+      <div className = "c-card">
+        <ClassCard show={showCard} Class={Class}/>
       </div>
     </div>
   );

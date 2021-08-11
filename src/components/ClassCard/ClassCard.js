@@ -1,22 +1,57 @@
-import React from "react";
-import { Card } from "react-bootstrap";
+import React, { useState } from "react";
+import { Button, Card, Tab, Tabs } from "react-bootstrap";
 
-function classcard({ classes }) {
-  return (
-    <div className="c-classcard">
-      <Card>
-        <Card.Img variant="top" src="holder.js/100px180" />
-        <Card.Body>
-          <Card.Title>Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+function ClassCard({show, Class}) {
+    const [cardTab, setCardTab] = useState ('details');
+
+    let dom;
+
+    if (cardTab ==="details") {
+        dom =  show && <div className="c-classcard">
+        <Card style={{ width: '18rem' }}> 
+            <Tabs id="controlled-tab" activeKey={cardTab} onSelect={(k) => setCardTab(k)} className="mb-3">
+                <Tab eventKey= 'details' title = "פרטים"></Tab>
+                <Tab eventKey= 'payment' title = "תשלומים"></Tab>
+            </Tabs>
+          <Card.Body >
+          <Card.Title>{Class.cname}</Card.Title>
+          <Card.Subtitle className="mb-2 text-muted">
+            {Class.instructor}
+          </Card.Subtitle>
+          <Card.Subtitle className="mb-3 text-muted">
+            {Class.room}
+          </Card.Subtitle>
+          <Card.Text>{Class.description}</Card.Text>
+          <Button variant="primary">פרטים נוספים</Button>
         </Card.Body>
-      </Card>
+        </Card>
     </div>
-  );
-}
+      }
 
-export default classcard;
+      else { //if (cardTab ==="payment") {
+        dom = show && <div className="c-classcard">
+        <Card style={{ width: '18rem' }}>
+          <Tabs id="controlled-tab" activeKey={cardTab} onSelect={(k) => setCardTab(k)} className="mb-3">
+                <Tab eventKey= 'details'  title = "פרטים"></Tab>
+                <Tab eventKey= 'payment'  title = "תשלומים"></Tab>
+            </Tabs>
+          <Card.Body >
+          <Card.Title>{Class.cname}</Card.Title>
+          <Card.Subtitle className="mb-2 text-muted">
+                מחיר לחודש 
+          </Card.Subtitle>
+          <Card.Text>
+           חודשים ששולמו
+          </Card.Text>
+          <Card.Text>חודשים שלא שולמו</Card.Text>
+          <Button variant="primary">תשלום</Button>
+        </Card.Body>
+        </Card>
+    </div>
+      }
+
+
+  return dom;
+
+  }
+export default ClassCard;

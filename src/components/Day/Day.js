@@ -11,7 +11,7 @@ function Day({userRole, classes, weekday}) {
         return a !== undefined}); 
 
     return (
-        <div>
+        <div className="d-column">
             <div className= "d-title">{weekday}</div>
             {dayClasses.map(Class => 
         <Row className = "d-box" ><ClassBox Class={Class}/></Row>
