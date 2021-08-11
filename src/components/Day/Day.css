@@ -1,10 +1,14 @@
 .d-title
 {
-    width: 150px;
     color: #5603AD;
     background-color: #b3e9c7;
     padding: 5px;
     margin: 7px;
     text-align: center;
     font-weight: bold;
+}
+
+.d-box 
+{
+    justify-content: center;
 }
