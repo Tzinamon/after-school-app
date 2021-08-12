@@ -14,7 +14,7 @@ function Day({userRole, classes, weekday}) {
         <div className="d-column">
             <div className= "d-title">{weekday}</div>
             {dayClasses.map(Class => 
-        <Row className = "d-box" ><ClassBox Class={Class}/></Row>
+        <ClassBox Class={Class}/>
             )}
         </div>
     );

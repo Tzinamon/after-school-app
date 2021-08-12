@@ -9,15 +9,3 @@
     font-weight: bold;
 }
 
-.d-box 
-{
-    justify-content: center;
-}
-
-.d-column
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-}

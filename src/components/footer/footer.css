@@ -1,0 +1,17 @@
+.f-footer
+{
+    display: flex;
+    color: #b3e9c7;
+    background-color: #97958C;
+    position: fixed;
+    bottom: 0px;
+    height: 75px;
+    width: 100%;
+    font-size: larger;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+.footer-icons{
+    display: flex;
+}

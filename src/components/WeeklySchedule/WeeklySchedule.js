@@ -1,30 +1,30 @@
 import React from "react";
-import { Col } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import Day from "../Day/Day";
 import "./WeeklySchedule.css";
 
 function WeeklySchedule({ userRole, classes }) {
   return (
-    <div className="w-row">
-      <Col >
+    <Row  className="w-row">
+      <Col md={2} sm={12}>
         <Day userRole={userRole} classes={classes} weekday={"ראשון"} />
       </Col>
-      <Col >
+      <Col md={2} sm={12}>
         <Day userRole={userRole} classes={classes} weekday={"שני"} />
       </Col>
-      <Col >
+      <Col md={2} sm={12}>
         <Day userRole={userRole} classes={classes} weekday={"שלישי"} />
       </Col>
-      <Col >
+      <Col md={2} sm={12}>
         <Day userRole={userRole} classes={classes} weekday={"רביעי"} />
       </Col>
-      <Col >
+      <Col md={2} sm={12}>
         <Day userRole={userRole} classes={classes} weekday={"חמישי"} />
       </Col>
-      <Col >
+      <Col md={2} sm={12}>
         <Day userRole={userRole} classes={classes} weekday={"שישי"} />
       </Col>
-    </div>
+    </Row>
   );
 }
 
