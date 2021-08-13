@@ -1,10 +1,11 @@
 import React from "react";
 import { useState } from "react";
-import { Button, Container, Modal, Nav, Navbar } from "react-bootstrap";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import NewClassModal from "../NewClassModal/NewClassModal";
 import "./TopNav.css";
 
 function TopNav({AddClass}) {
-      const [show, setShow] = useState(false);
+      const [isShown, setIsShown] = useState(false);
 
   return (
     <div className="t-nav">
@@ -16,7 +17,7 @@ function TopNav({AddClass}) {
             <Nav className="justify-content-end">
               <Nav.Link href="#/">חוגים</Nav.Link>
               <Nav.Link href="#/dashboard">ניהול</Nav.Link>
-              <Nav.Item as={Button} onClick={()=>setShow(true)}>
+              <Nav.Item as={Button} onClick={()=>setIsShown(true)}>
                 הוספת חוג
               </Nav.Item>
             </Nav>
@@ -24,20 +25,7 @@ function TopNav({AddClass}) {
         </Container>
       </Navbar>
 
-      <Modal show={show} onHide={()=> setShow(false)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={()=> setShow(false)}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={()=> setShow(false)}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
+        <NewClassModal show={isShown} onClose={() => setIsShown(false)}/>
     </div>
   );
 }
