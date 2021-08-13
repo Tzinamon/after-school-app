@@ -13,4 +13,5 @@
 .c-card 
 {
     position: absolute;
+    z-index: 1;
 }

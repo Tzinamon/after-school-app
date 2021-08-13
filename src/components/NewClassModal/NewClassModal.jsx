@@ -1,7 +1,24 @@
-import React from "react";
+import { useState } from "react";
 import { Modal, Button, Form, Col, Row, FloatingLabel } from "react-bootstrap";
+import "./NewClassModal.css";
 
 function NewClassModal({show, onClose}) {
+        
+    const [className, setClassName] = useState("");
+    const [classInstructor, setClassInstructor] = useState("");
+    const [classDesc, setClassDesc] = useState("");
+    const [classRoom, setClassRoom] = useState ("");
+    const [classPrice, setClassPrice] = useState ("");
+    const [classDay, setClassDay] = useState("");
+    const [classTime, setClassTime] = useState("");
+
+    function CreateClass(){
+        console.log(className, classInstructor, classDesc, classRoom, classPrice, classDay, classTime);
+
+    }
+
+
+
   return (
     <Modal show={show} onHide={onClose} size="md">
       <Modal.Header closeButton>
@@ -14,7 +31,7 @@ function NewClassModal({show, onClose}) {
       שם החוג
     </Form.Label>
     <Col sm={8}>
-      <Form.Control type="text"  />
+      <Form.Control type="text" value={className} onChange={e=>setClassName(e.target.value)}/>
     </Col>
   </Form.Group>
 
@@ -23,7 +40,7 @@ function NewClassModal({show, onClose}) {
       שם המדריכ/ה
     </Form.Label>
     <Col sm={8}>
-      <Form.Control type="text"  />
+      <Form.Control type="text" value={classInstructor} onChange={e=>setClassInstructor(e.target.value)} />
     </Col>
   </Form.Group>
 
@@ -32,7 +49,7 @@ function NewClassModal({show, onClose}) {
       תיאור החוג
     </Form.Label>
     <Col sm={8}>
-      <Form.Control type="text"  />
+      <Form.Control as="textarea" rows={3} value={classDesc} onChange={e=>setClassDesc(e.target.value)} />
     </Col>
   </Form.Group>
 
@@ -41,7 +58,7 @@ function NewClassModal({show, onClose}) {
       היכן מתקיים
     </Form.Label>
     <Col sm={8}>
-      <Form.Control type="text"  />
+      <Form.Control type="text" value={classRoom} onChange={e=>setClassRoom(e.target.value)}  />
     </Col>
   </Form.Group>
 
@@ -50,39 +67,40 @@ function NewClassModal({show, onClose}) {
       מחיר לחודש
     </Form.Label>
     <Col sm={8}>
-      <Form.Control type="password"/>
+      <Form.Control type="text" value={classPrice} onChange={e=>setClassPrice(e.target.value)}/>
     </Col>
   </Form.Group>
 
-  <FloatingLabel controlId="floatingSelect">
-  <Form.Select aria-label="Floating label select example">
+  <Form.Group>
+  <Form.Select controlId="formHorizontalDay">
     <option>יום פעילות</option>
     <option value="1">ראשון</option>
     <option value="2">שני</option>
     <option value="3">שלישי</option>
-    <option value="3">רביעי</option>
-    <option value="3">חמישי</option>
-    <option value="3">שישי</option>
-  </Form.Select>
-</FloatingLabel>
-  <Form.Group as={Row} className="mb-3" controlId="formHorizontalCheck">
-    <Col sm={{ span: 10, offset: 2 }}>
-      <Form.Check label="Remember me" />
-    </Col>
+    <option value="4">רביעי</option>
+    <option value="5">חמישי</option>
+    <option value="6">שישי</option>
+  </Form.Select >
+  <br />
   </Form.Group>
 
-  <Form.Group as={Row} className="mb-3">
-    <Col sm={{ span: 10, offset: 2 }}>
-      <Button type="submit">Sign in</Button>
+<Form.Group as={Row} className="mb-3" controlId="formHorizontalTime">
+    <Form.Label column sm={4}>
+      שעת הפעילות
+    </Form.Label>
+    <Col sm={8}>
+      <Form.Control type="text" value={classTime} onChange={e=>setClassTime(e.target.value)}/>
     </Col>
   </Form.Group>
+  
+ 
 </Form>
       </Modal.Body>
       <Modal.Footer>
         <Button variant="secondary" onClick={onClose}>
           סגירה
         </Button>
-        <Button variant="primary" onClick={onClose}>
+        <Button variant="primary" onClick={CreateClass}>
           שמירה
         </Button>
       </Modal.Footer>
