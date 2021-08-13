@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Modal, Button, Form, Col, Row, FloatingLabel } from "react-bootstrap";
+import { Modal, Button, Form, Col, Row,controlId } from "react-bootstrap";
 import "./NewClassModal.css";
 
-function NewClassModal({show, onClose}) {
+function NewClassModal({show, onClose, onCreate}) {
         
     const [className, setClassName] = useState("");
     const [classInstructor, setClassInstructor] = useState("");
@@ -12,8 +12,20 @@ function NewClassModal({show, onClose}) {
     const [classDay, setClassDay] = useState("");
     const [classTime, setClassTime] = useState("");
 
+    function ClearForm(){
+      setClassName("");
+      setClassInstructor("");
+      setClassDesc("");
+      setClassRoom("");
+      setClassPrice("");
+      setClassDay("");
+      setClassTime("");
+    }
+
     function CreateClass(){
-        console.log(className, classInstructor, classDesc, classRoom, classPrice, classDay, classTime);
+        onCreate(className, classInstructor, classDesc, classRoom, classPrice, classDay, classTime);
+        ClearForm();
+        onClose();
 
     }
 
@@ -72,7 +84,7 @@ function NewClassModal({show, onClose}) {
   </Form.Group>
 
   <Form.Group>
-  <Form.Select controlId="formHorizontalDay">
+  <Form.Select>
     <option>יום פעילות</option>
     <option value="1">ראשון</option>
     <option value="2">שני</option>

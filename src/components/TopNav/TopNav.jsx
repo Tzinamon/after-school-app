@@ -4,8 +4,10 @@ import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import NewClassModal from "../NewClassModal/NewClassModal";
 import "./TopNav.css";
 
-function TopNav({AddClass}) {
+function TopNav({onAddClass}) {
       const [isShown, setIsShown] = useState(false);
+
+      
 
   return (
     <div className="t-nav">
@@ -25,29 +27,12 @@ function TopNav({AddClass}) {
         </Container>
       </Navbar>
 
-        <NewClassModal show={isShown} onClose={() => setIsShown(false)}/>
+        <NewClassModal show={isShown} onClose={() => setIsShown(false)} onCreate={onAddClass}/>
     </div>
   );
 }
 export default TopNav;
 
 
-  /* <Container>
-<Nav
-  activeKey="/home"
-  onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}>
-  <Nav.Item>
-    <Nav.Link href="/home">בית</Nav.Link>
-  </Nav.Item>
-  <Nav.Item>
-    <Nav.Link eventKey="link-1">מידע</Nav.Link>
-  </Nav.Item>
-  <Nav.Item>
-    <Nav.Link eventKey="link-2">עוד משהו</Nav.Link>
-  </Nav.Item>
-  <Nav.Item as={Button} onClick={()=> modalClick(true)}> 
-           הוספת חוג 
-  </Nav.Item>
-</Nav>
-</Container> */
+
 

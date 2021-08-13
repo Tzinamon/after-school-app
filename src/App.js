@@ -10,6 +10,7 @@ import LoginPage from "./pages/login/LoginPage";
 import jsonUsers from "./data/users.json";
 import jsonClasses from "./data/classes.json";
 import ClassModel from "./Model/ClassModel";
+import NewClassModal from "./components/NewClassModal/NewClassModal";
 
 function App() {          
   const [users, setUsers] = useState(
@@ -29,17 +30,19 @@ function App() {
     })
   );
 
-  // const [userRole, setUserRole] = useState(new UserModel(
-  //   {
-  //     id : "2",
-  //     fname : "Jack",
-  //     lname : "Smith",
-  //     email : "jacksmith@gmail.com",
-  //     role : "parent",
-  //     password : "54321",
-  // }
-  // ));
-      const AddClass= ()=>{
+      function createNewClass(className, classInstructor, classDesc, classRoom, classPrice, classDay, classTime){
+        const newClass = new ClassModel({
+          classid : classes[classes.length-1].classid+1,
+          cname : className,
+          instructor : classInstructor,
+          description : classDesc,
+          schedule : [{classDay, classTime}],
+          price : classPrice,
+          room : classRoom
+        })
+
+        setClasses(classes.concat(newClass));
+
 
       }
 
@@ -55,7 +58,7 @@ function App() {
             <LoginPage />
           </Route>
           <Route exact path="/dashboard">
-            <TopNav userRole={userRole} AddClass={AddClass}/>
+            <TopNav userRole={userRole} onAddClass={createNewClass}/>
             <DashboardPage userRole={userRole} classes={classes}/>
           </Route>
         </Switch>
