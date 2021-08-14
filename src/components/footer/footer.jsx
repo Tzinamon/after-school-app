@@ -2,16 +2,17 @@ import React from "react";
 import "./footer.css";
 import FB from "./FB.png";
 import insta from "./insta color logo.png";
+import whatsapp from "./whatsapp.jpg";
 
 function Footer(props) {
   return (
     <div className="f-footer">
       <div>
-        <div>חוגי חגיגה</div>
+        <div>אודות חוגי תפוח</div>
         <div>דברו איתנו</div>
       </div>
       <div className="footer-icons">
-        <div>WhatsApp icon</div>
+        <div><img src={whatsapp} width="30"  alt="" /></div>
         <div>
           <img src={FB} width="30"  alt="" />
         </div>

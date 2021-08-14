@@ -1,14 +1,13 @@
 import React from "react";
 import { useState } from "react";
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
-import NewClassModal from "../NewClassModal/NewClassModal";
 import "./TopNav.css";
 import logo from "./appleclasses.jpg";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import NewClassModal from "../NewClassModal/NewClassModal";
+
 
 function TopNav({onAddClass}) {
       const [isShown, setIsShown] = useState(false);
-
-      
 
   return (
     <div className="t-nav">

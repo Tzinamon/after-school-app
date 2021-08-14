@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Modal, Button, Form, Col, Row,controlId } from "react-bootstrap";
+import { Modal, Button, Form, Col, Row, controlId} from "react-bootstrap";
 import "./NewClassModal.css";
 
 function NewClassModal({show, onClose, onCreate}) {
@@ -12,7 +12,7 @@ function NewClassModal({show, onClose, onCreate}) {
     const [classDay, setClassDay] = useState("");
     const [classTime, setClassTime] = useState("");
 
-    function ClearForm(){
+    function clearForm(){
       setClassName("");
       setClassInstructor("");
       setClassDesc("");
@@ -22,14 +22,11 @@ function NewClassModal({show, onClose, onCreate}) {
       setClassTime("");
     }
 
-    function CreateClass(){
+    function createClass(){
         onCreate(className, classInstructor, classDesc, classRoom, classPrice, classDay, classTime);
-        ClearForm();
+        clearForm();
         onClose();
-
     }
-
-
 
   return (
     <Modal show={show} onHide={onClose} size="md">
@@ -92,8 +89,8 @@ function NewClassModal({show, onClose, onCreate}) {
     </Col>
   </Form.Group>
 
-  <Form.Group>
-  <Form.Select >
+  {/* <Form.Group>
+  <Form.control value={classDay} onSelect={e=>setClassDay(e.target.value)}>
     <option>יום פעילות</option>
     <option value="ראשון">ראשון</option>
     <option value="שני">שני</option>
@@ -101,9 +98,9 @@ function NewClassModal({show, onClose, onCreate}) {
     <option value="רביעי">רביעי</option>
     <option value="חמישי">חמישי</option>
     <option value="שישי">שישי</option>
-  </Form.Select >
+  </Form.control >
   <br />
-  </Form.Group>
+  </Form.Group> */}
 
 <Form.Group as={Row} className="mb-3" controlId="formHorizontalTime">
     <Form.Label column sm={4}>
@@ -113,15 +110,13 @@ function NewClassModal({show, onClose, onCreate}) {
       <Form.Control type="text" value={classTime} onChange={e=>setClassTime(e.target.value)}/>
     </Col>
   </Form.Group>
-  
- 
 </Form>
       </Modal.Body>
       <Modal.Footer>
         <Button variant="secondary" onClick={onClose}>
           סגירה
         </Button>
-        <Button variant="primary" onClick={CreateClass}>
+        <Button variant="primary" onClick={createClass}>
           שמירה
         </Button>
       </Modal.Footer>
