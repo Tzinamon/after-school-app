@@ -1,5 +1,7 @@
 import React from "react";
 import "./footer.css";
+import FB from "./FB.png";
+import insta from "./insta color logo.png";
 
 function Footer(props) {
   return (
@@ -10,9 +12,12 @@ function Footer(props) {
       </div>
       <div className="footer-icons">
         <div>WhatsApp icon</div>
-        <div>facebook icon</div>
-        <div>instagram icon</div>
-        <div>twitter icon</div>
+        <div>
+          <img src={FB} width="30"  alt="" />
+        </div>
+          <div>
+            <img src={insta} width="30"  alt="" />
+          </div>
       </div>
       <div>כל הזכויות שמורות</div>
     </div>

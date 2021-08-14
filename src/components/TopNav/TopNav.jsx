@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import NewClassModal from "../NewClassModal/NewClassModal";
 import "./TopNav.css";
+import logo from "./appleclasses.jpg";
 
 function TopNav({onAddClass}) {
       const [isShown, setIsShown] = useState(false);
@@ -13,7 +14,13 @@ function TopNav({onAddClass}) {
     <div className="t-nav">
       <Navbar bg="light" expand="lg">
         <Container>
-          <Navbar.Brand href="#/">חוגים</Navbar.Brand>
+          <Navbar.Brand href="#/">      
+          <img
+        src={logo}
+        width="75"
+        className="d-inline-block align-top"
+        alt=""/>
+      </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="justify-content-end">

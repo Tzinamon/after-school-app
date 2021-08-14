@@ -3,7 +3,7 @@ import { Button, Container, Modal } from "react-bootstrap";
 import WeeklySchedule from '../../components/WeeklySchedule/WeeklySchedule';
 
 
-function DashboardPage({ userRole, classes, showClassAddModal, setShowClassAddModal}) {
+function DashboardPage({userRole, classes}) {
     console.log("dashboard", classes)
   return (
     <div className="p-dashboard">

@@ -1,6 +1,6 @@
 class ClassModel {
     constructor (plainClass){
-        this.classid = plainClass.id;
+        this.classid = plainClass.classid;
         this.cname = plainClass.cname;
         this.instructor = plainClass.instructor;
         this.description = plainClass.description;

@@ -4,6 +4,7 @@ import Day from "../Day/Day";
 import "./WeeklySchedule.css";
 
 function WeeklySchedule({ userRole, classes }) {
+  console.log(classes);
   return (
     <Row  className="w-row">
       <Col md={2} sm={12}>

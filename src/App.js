@@ -10,7 +10,6 @@ import LoginPage from "./pages/login/LoginPage";
 import jsonUsers from "./data/users.json";
 import jsonClasses from "./data/classes.json";
 import ClassModel from "./Model/ClassModel";
-import NewClassModal from "./components/NewClassModal/NewClassModal";
 
 function App() {          
   const [users, setUsers] = useState(
@@ -36,14 +35,13 @@ function App() {
           cname : className,
           instructor : classInstructor,
           description : classDesc,
-          schedule : [{classDay, classTime}],
+          schedule : [{day: classDay, time: classTime}],
           price : classPrice,
           room : classRoom
         })
 
         setClasses(classes.concat(newClass));
-
-
+        
       }
 
   return (

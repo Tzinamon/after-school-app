@@ -47,51 +47,60 @@ function NewClassModal({show, onClose, onCreate}) {
     </Col>
   </Form.Group>
 
-  <Form.Group as={Row} className="mb-3" controlId="formHorizontalInst">
+  {/* <Form.Group as={Row} className="mb-3" controlId="formHorizontalInst">
     <Form.Label column sm={4}>
       שם המדריכ/ה
     </Form.Label>
     <Col sm={8}>
       <Form.Control type="text" value={classInstructor} onChange={e=>setClassInstructor(e.target.value)} />
     </Col>
-  </Form.Group>
+  </Form.Group> */}
 
-  <Form.Group as={Row} className="mb-3" controlId="formHorizontalDesc">
+  {/* <Form.Group as={Row} className="mb-3" controlId="formHorizontalDesc">
     <Form.Label column sm={4}>
       תיאור החוג
     </Form.Label>
     <Col sm={8}>
       <Form.Control as="textarea" rows={3} value={classDesc} onChange={e=>setClassDesc(e.target.value)} />
     </Col>
-  </Form.Group>
+  </Form.Group> */}
 
-  <Form.Group as={Row} className="mb-3" controlId="formHorizontalLoc">
+  {/* <Form.Group as={Row} className="mb-3" controlId="formHorizontalLoc">
     <Form.Label column sm={4}>
       היכן מתקיים
     </Form.Label>
     <Col sm={8}>
       <Form.Control type="text" value={classRoom} onChange={e=>setClassRoom(e.target.value)}  />
     </Col>
-  </Form.Group>
+  </Form.Group> */}
 
-  <Form.Group as={Row} className="mb-3" controlId="formHorizontalPrice">
+  {/* <Form.Group as={Row} className="mb-3" controlId="formHorizontalPrice">
     <Form.Label column sm={4}>
       מחיר לחודש
     </Form.Label>
     <Col sm={8}>
       <Form.Control type="text" value={classPrice} onChange={e=>setClassPrice(e.target.value)}/>
     </Col>
+  </Form.Group> */}
+
+  <Form.Group as={Row} className="mb-3" controlId="formHorizontalDay">
+    <Form.Label column sm={4}>
+          יום
+    </Form.Label>
+    <Col sm={8}>
+      <Form.Control type="text" value={classDay} onChange={e=>setClassDay(e.target.value)}/>
+    </Col>
   </Form.Group>
 
   <Form.Group>
-  <Form.Select>
+  <Form.Select >
     <option>יום פעילות</option>
-    <option value="1">ראשון</option>
-    <option value="2">שני</option>
-    <option value="3">שלישי</option>
-    <option value="4">רביעי</option>
-    <option value="5">חמישי</option>
-    <option value="6">שישי</option>
+    <option value="ראשון">ראשון</option>
+    <option value="שני">שני</option>
+    <option value="שלישי">שלישי</option>
+    <option value="רביעי">רביעי</option>
+    <option value="חמישי">חמישי</option>
+    <option value="שישי">שישי</option>
   </Form.Select >
   <br />
   </Form.Group>
