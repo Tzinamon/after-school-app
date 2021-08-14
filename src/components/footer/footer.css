@@ -14,4 +14,10 @@
 
 .footer-icons{
     display: flex;
+    
+}
+
+.footer-icons div
+{
+    margin: 5px;
 }

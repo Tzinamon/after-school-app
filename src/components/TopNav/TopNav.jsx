@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import "./TopNav.css";
 import logo from "./appleclasses.jpg";
@@ -32,7 +31,6 @@ function TopNav({onAddClass}) {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-
         <NewClassModal show={isShown} onClose={() => setIsShown(false)} onCreate={onAddClass}/>
     </div>
   );
