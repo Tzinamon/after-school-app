@@ -1,12 +1,17 @@
 .t-nav{
-    background-color: #6cbeed;
+    background-color: #FA7921;
     margin: 10px auto;
     color: #5603AD;
     font-weight: bolder;
     font-size: larger;    
 }
 
-.nav{
-    align-items: center;
+.t-nav .btn-primary{
+    margin: 5px;
+}
+
+.t-nav .bg-light
+{
+    background-color: #6DC7EE !important;
 }
 

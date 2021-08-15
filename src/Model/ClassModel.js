@@ -7,6 +7,8 @@ class ClassModel {
         this.schedule = plainClass.schedule;
         this.price = plainClass.price;
         this.room = plainClass.room;
+        this.participantName = plainClass.participantName;
+        this.Collection = plainClass.Collection;
     }
 }
 

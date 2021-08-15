@@ -1,10 +1,10 @@
 .d-title
 {
-    width: 95%;
-    color: #5603AD;
-    background-color: #b3e9c7;
+    width: 100%;
+    color: honeydew;
+    background-color: #2129AA;
     padding: 5px;
-    margin: 7px;
+    margin: 7px auto;
     text-align: center;
     font-weight: bold;
 }

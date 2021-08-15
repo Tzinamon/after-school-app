@@ -18,7 +18,7 @@ function App() {
   const [classes, setClasses] = useState(
     jsonClasses.map((plainClass) => new ClassModel(plainClass))
   );
-  const [userRole, setUserRole] = useState("-1");
+  const [userRole, setUserRole] = useState(1); //1: Admin, -1: customer
    
 
   function switchUser(){

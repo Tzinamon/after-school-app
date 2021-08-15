@@ -3,7 +3,7 @@ import {Row} from 'react-bootstrap';
 import './Day.css';
 import ClassBox from '../ClassBox/ClassBox';
 
-function Day({classes, weekday}) {
+function Day({userRole, classes, weekday}) {
     let dayClasses = classes.filter(Class => {
             const a = Class.schedule.find(dayandtime => {
               return  dayandtime.day === weekday});                
@@ -15,7 +15,7 @@ function Day({classes, weekday}) {
         <div className="d-column">
             <div className= "d-title">{weekday}</div>
             {dayClasses.map(Class => 
-        <ClassBox Class={Class}/>
+        <ClassBox Class={Class} userRole={userRole}/>
             )}
         </div>
     );

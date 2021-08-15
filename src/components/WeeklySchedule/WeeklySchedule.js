@@ -3,7 +3,7 @@ import { Col, Row } from "react-bootstrap";
 import Day from "../Day/Day";
 import "./WeeklySchedule.css";
 
-function WeeklySchedule({ userRole, classes }) {
+function WeeklySchedule({userRole, classes }) {
   console.log(classes);
   return (
     <Row  className="w-row">

@@ -36,7 +36,7 @@ function NewClassModal({ show, onClose, onCreate }) {
   }
 
   return (
-    <Modal show={show} onHide={onClose} size="md">
+    <Modal show={show} onHide={onClose} size="md" className="c-new-class">
       <Modal.Header closeButton>
         <Modal.Title>הוספת חוג חדש</Modal.Title>
       </Modal.Header>
@@ -55,41 +55,45 @@ function NewClassModal({ show, onClose, onCreate }) {
             </Col>
           </Form.Group>
 
-          {/* <Form.Group as={Row} className="mb-3" controlId="formHorizontalInst">
-    <Form.Label column sm={4}>
-      שם המדריכ/ה
-    </Form.Label>
-    <Col sm={8}>
-      <Form.Control type="text" value={classInstructor} onChange={e=>setClassInstructor(e.target.value)} />
-    </Col>
-  </Form.Group> */}
+          <Form.Group as={Row} className="mb-3" controlId="formHorizontalInst">
+            <Form.Label column sm={4}>
+              שם המדריכ/ה
+            </Form.Label>
+            <Col sm={8}>
+              <Form.Control
+                type="text"
+                value={classInstructor}
+                onChange={(e) => setClassInstructor(e.target.value)}
+              />
+            </Col>
+          </Form.Group>
 
-          {/* <Form.Group as={Row} className="mb-3" controlId="formHorizontalDesc">
-    <Form.Label column sm={4}>
-      תיאור החוג
-    </Form.Label>
-    <Col sm={8}>
-      <Form.Control as="textarea" rows={3} value={classDesc} onChange={e=>setClassDesc(e.target.value)} />
-    </Col>
-  </Form.Group> */}
+          <Form.Group as={Row} className="mb-3" controlId="formHorizontalDesc">
+            <Form.Label column sm={4}>
+              תיאור החוג
+            </Form.Label>
+            <Col sm={8}>
+              <Form.Control
+                as="textarea"
+                rows={3}
+                value={classDesc}
+                onChange={(e) => setClassDesc(e.target.value)}
+              />
+            </Col>
+          </Form.Group>
 
-          {/* <Form.Group as={Row} className="mb-3" controlId="formHorizontalLoc">
-    <Form.Label column sm={4}>
-      היכן מתקיים
-    </Form.Label>
-    <Col sm={8}>
-      <Form.Control type="text" value={classRoom} onChange={e=>setClassRoom(e.target.value)}  />
-    </Col>
-  </Form.Group> */}
-
-          {/* <Form.Group as={Row} className="mb-3" controlId="formHorizontalPrice">
-    <Form.Label column sm={4}>
-      מחיר לחודש
-    </Form.Label>
-    <Col sm={8}>
-      <Form.Control type="text" value={classPrice} onChange={e=>setClassPrice(e.target.value)}/>
-    </Col>
-  </Form.Group> */}
+          <Form.Group as={Row} className="mb-3" controlId="formHorizontalLoc">
+            <Form.Label column sm={4}>
+              היכן מתקיים
+            </Form.Label>
+            <Col sm={8}>
+              <Form.Control
+                type="text"
+                value={classRoom}
+                onChange={(e) => setClassRoom(e.target.value)}
+              />
+            </Col>
+          </Form.Group>
 
           <Form.Group as={Row} className="mb-3" controlId="formHorizontalDay">
             <Form.Label column sm={4}>
@@ -104,19 +108,6 @@ function NewClassModal({ show, onClose, onCreate }) {
             </Col>
           </Form.Group>
 
-          {/* <Form.Group>
-  <Form.control value={classDay} onSelect={e=>setClassDay(e.target.value)}>
-    <option>יום פעילות</option>
-    <option value="ראשון">ראשון</option>
-    <option value="שני">שני</option>
-    <option value="שלישי">שלישי</option>
-    <option value="רביעי">רביעי</option>
-    <option value="חמישי">חמישי</option>
-    <option value="שישי">שישי</option>
-  </Form.control >
-  <br />
-  </Form.Group> */}
-
           <Form.Group as={Row} className="mb-3" controlId="formHorizontalTime">
             <Form.Label column sm={4}>
               שעת הפעילות
@@ -130,8 +121,23 @@ function NewClassModal({ show, onClose, onCreate }) {
             </Col>
           </Form.Group>
         </Form>
+
+        <Form.Group as={Row} className="mb-3" controlId="formHorizontalPrice">
+        <Form.Label column sm={4}>
+          מחיר לחודש
+        </Form.Label>
+        <Col sm={8}>
+          <Form.Control
+            type="text"
+            value={classPrice}
+            onChange={(e) => setClassPrice(e.target.value)}
+          />
+        </Col>
+      </Form.Group>
       </Modal.Body>
-      
+
+
+
       <Modal.Footer>
         <Button variant="secondary" onClick={onClose}>
           סגירה
@@ -145,3 +151,5 @@ function NewClassModal({ show, onClose, onCreate }) {
 }
 
 export default NewClassModal;
+
+
