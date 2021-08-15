@@ -18,16 +18,12 @@ function App() {
   const [classes, setClasses] = useState(
     jsonClasses.map((plainClass) => new ClassModel(plainClass))
   );
-  const [userRole, setUserRole] = useState(
-    new UserModel({
-      id: "1",
-      fname: "John",
-      lname: "Doe",
-      email: "johndoe@gmail.com",
-      role: "manager",
-      password: "12345",
-    })
-  );
+  const [userRole, setUserRole] = useState("-1");
+   
+
+  function switchUser(){
+    setUserRole(userRole * -1);
+  }
 
       function createNewClass(className, classInstructor, classDesc, classRoom, classPrice, classDay, classTime){
         const newClass = new ClassModel({
@@ -49,14 +45,14 @@ function App() {
       <HashRouter>
         <Switch>
           <Route exact path="/">
-            <TopNav />
+            <TopNav/>
             <HomePage userRole={userRole} classes={classes} />
           </Route>
           <Route exact path="/login">
             <LoginPage />
           </Route>
           <Route exact path="/dashboard">
-            <TopNav userRole={userRole} onAddClass={createNewClass}/>
+            <TopNav userRole={userRole} onAddClass={createNewClass} switchUser={switchUser}/>
             <DashboardPage userRole={userRole} classes={classes}/>
           </Route>
         </Switch>
