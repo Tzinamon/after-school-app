@@ -9,7 +9,7 @@ class ClassModel {
         this.room = plainClass.room;
         this.participantName = plainClass.participantName;
         this.Collection = plainClass.Collection;
-        this.signUp = plainClass.signUp;
+        this.signedUp = plainClass.signedUp;
         this.attendance = plainClass.attendance;
     }
 }
