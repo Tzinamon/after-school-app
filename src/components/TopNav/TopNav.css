@@ -15,3 +15,7 @@
     background-color: #6DC7EE !important;
 }
 
+.nav-user {
+    display: flex;
+}
+

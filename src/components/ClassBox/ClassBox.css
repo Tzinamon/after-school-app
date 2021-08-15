@@ -14,7 +14,7 @@
 {
     width: 100%;
     height: 100px;
-    color: #6cbeed;
+    color: ghostwhite;
     background-color: rgba(255, 0, 0, 0.801);
     padding: 5px;
     margin: 3px auto;
@@ -26,7 +26,7 @@
 {
     width: 100%;
     height: 100px;
-    color: #6cbeed;
+    color: slategray;
     background-color: rgba(255, 255, 0, 0.801);
     padding: 5px;
     margin: 3px auto;
@@ -38,7 +38,7 @@
 {
     width: 100%;
     height: 100px;
-    color: #6cbeed;
+    color: ghostwhite;
     background-color: rgba(0, 128, 0, 0.801);
     padding: 5px;
     margin: 3px auto;
@@ -68,7 +68,7 @@
 {
     width: 100%;
     height: 100px;
-    color: #6cbeed;
+    color: ghostwhite;
     background-color: darkblue;
     padding: 5px;
     margin: 3px auto;
@@ -80,8 +80,8 @@
 {
     width: 100%;
     height: 100px;
-    color: #6cbeed;
-    background-color: purple;
+    color: ghostwhite;
+    background-color: #1E90FF;
     padding: 5px;
     margin: 3px auto;
     text-align: center;

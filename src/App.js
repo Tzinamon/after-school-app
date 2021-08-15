@@ -25,7 +25,7 @@ function App() {
     setUserRole(userRole * -1);
   }
 
-      function createNewClass(className, classInstructor, classDesc, classRoom, classPrice, classDay, classTime){
+  function createNewClass(className, classInstructor, classDesc, classRoom, classPrice, classDay, classTime){
         const newClass = new ClassModel({
           classid : classes[classes.length-1].classid+1,
           cname : className,
@@ -40,6 +40,12 @@ function App() {
         
       }
 
+    const [showInfo, setShowInfo] = useState("collection");
+
+    function displayData(type){
+      setShowInfo(type);
+    }
+
   return (
     <div>
       <HashRouter>
@@ -52,8 +58,8 @@ function App() {
             <LoginPage />
           </Route>
           <Route exact path="/dashboard">
-            <TopNav userRole={userRole} onAddClass={createNewClass} switchUser={switchUser}/>
-            <DashboardPage userRole={userRole} classes={classes}/>
+            <TopNav userRole={userRole} onAddClass={createNewClass} switchUser={switchUser} displayData={displayData}/>
+            <DashboardPage userRole={userRole} classes={classes} showInfo={showInfo}/>
           </Route>
         </Switch>
         <Footer />

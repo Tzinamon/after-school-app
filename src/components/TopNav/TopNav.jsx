@@ -5,10 +5,8 @@ import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import NewClassModal from "../NewClassModal/NewClassModal";
 
 
-function TopNav({userRole, onAddClass, switchUser}) {
+function TopNav({userRole, onAddClass, switchUser, displayData}) {
       const [isShown, setIsShown] = useState(false);
-
-      const [showCollection, setShowCollection] = useState(false);
 
   return (
     <div className="t-nav">
@@ -24,10 +22,16 @@ function TopNav({userRole, onAddClass, switchUser}) {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="justify-content-end">
-              {userRole === 1 ? null :<Nav.Link href="#/">החוגים של רועי ועידו</Nav.Link>}
+              {userRole === 1 ? null :<div className="nav-user">
+                החוגים של
+                 <div>רועי</div>
+                  <div>ועידו</div>
+                </div>}
               {userRole === 1 ? <Nav.Link href="#/dashboard">ניהול</Nav.Link> : null}
-              {userRole === 1 ? <Nav.Item as={Button} onClick={()=>setIsShown(true)}>הוספת חוג</Nav.Item> :null}
-              {userRole === 1 ? <Nav.Item as={Button} onClick={()=>setShowCollection(true)}>מצב גבייה</Nav.Item> :null}
+              {userRole === 1 ? <Nav.Item as={Button} variant="outline-secondary" size="sm" onClick={()=>setIsShown(true)}>הוספת חוג</Nav.Item> :null}
+              {userRole === 1 ? <Nav.Item as={Button} onClick={()=>displayData("collection")}>מצב גבייה</Nav.Item> :null}
+              {userRole === 1 ? <Nav.Item as={Button} onClick={()=>displayData("signup")}>מצב רישום</Nav.Item> :null}
+              {userRole === 1 ? <Nav.Item as={Button} onClick={()=>displayData("attendance")}>מצב נוכחות</Nav.Item> :null}
             </Nav>
           </Navbar.Collapse>
         </Container>
