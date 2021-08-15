@@ -17,5 +17,24 @@
 
 .nav-user {
     display: flex;
+    margin: 5px;
+    font-size: x-large;
+}
+
+.nav-user div 
+{
+    margin: 3px;
+    font-size: x-large;
+}
+.nav-user .name-1
+{
+    color: darkblue;
+    text-decoration: underline;
+}
+
+.nav-user .name-2
+{
+    color: #1E90FF;
+    text-decoration: underline;
 }
 

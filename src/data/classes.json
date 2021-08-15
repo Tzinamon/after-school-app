@@ -9,8 +9,8 @@
         "room": "אולם קטן",
         "participantName": "רועי",
         "Collection": 2,
-        "signUp": 0,
-        "attendance":0
+        "signedUp": 0,
+        "attendance":2
     },
     {
         "classid": 12,
@@ -22,7 +22,7 @@
         "room": "חדר מחשבים",
         "participantName": "",
         "Collection": 2,
-        "signUp": 1,
+        "signedUp": 1,
         "attendance":0
         },
     {
@@ -35,7 +35,7 @@
         "room": "חדר 113",
         "participantName": "רועי",
         "Collection": 1,
-        "signUp": 2,
+        "signedUp": 2,
         "attendance":1
 
     },
@@ -49,7 +49,7 @@
         "room": "חדר אומנות",
         "participantName": "עידו",
         "Collection": 0,
-        "signUp": 0,
+        "signedUp": 0,
         "attendance":0
 
     },
@@ -63,7 +63,7 @@
         "room": "חדר אומנות",
         "participantName": "",
         "Collection": 0,
-        "signUp": 1,
+        "signedUp": 1,
         "attendance":1
     },
     {
@@ -76,8 +76,8 @@
         "room": "חדר 113",
         "participantName": "עידו",
         "Collection": 0,
-        "signUp": 0,
-        "attendance":0
+        "signedUp": 0,
+        "attendance":2
     },
     {
         "classid": 17,
@@ -89,7 +89,7 @@
         "room": "חדר 113",
         "participantName": "",
         "Collection": 1,
-        "signUp": 2,
+        "signedUp": 2,
         "attendance":1
     },
     {
@@ -102,7 +102,7 @@
         "room": "סטודיו",
         "participantName": "",
         "Collection": 0,
-        "signUp": 0,
+        "signedUp": 0,
         "attendance":0
     }
 ]

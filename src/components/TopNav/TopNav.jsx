@@ -23,9 +23,9 @@ function TopNav({userRole, onAddClass, switchUser, displayData}) {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="justify-content-end">
               {userRole === 1 ? null :<div className="nav-user">
-                החוגים של
-                 <div>רועי</div>
-                  <div>ועידו</div>
+                <div>החוגים של</div>
+                 <div className="name-1">רועי</div>
+                  <div className="name-2">ועידו</div>
                 </div>}
               {userRole === 1 ? <Nav.Link href="#/dashboard">ניהול</Nav.Link> : null}
               {userRole === 1 ? <Nav.Item as={Button} variant="outline-secondary" size="sm" onClick={()=>setIsShown(true)}>הוספת חוג</Nav.Item> :null}

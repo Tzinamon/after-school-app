@@ -4,7 +4,7 @@ import "./ClassBox.css";
 
 function ClassBox({ Class, userRole , showInfo}) {
   const [showCard, setShowCard] = useState(false);
-  let classType;
+  let classType = "admin-box";
   
   if (userRole === -1) 
     {
@@ -36,22 +36,24 @@ function ClassBox({ Class, userRole , showInfo}) {
         {
         classType = "admin-box-green";
         }
-      } 
-  if (userRole === 1 && showInfo === "signup")
-     {
-      if (Class.signedUp === 2) 
-        {
-        classType = "admin-box-red";
-        }
-      else if (Class.signedUp === 1) 
-        {
-        classType = "admin-box-yellow";
-        } 
-      else 
-        {
-        classType = "admin-box-green";
-        }
-     } 
+     }
+
+   if (userRole === 1 && showInfo === "signup")
+      {
+       if (Class.signedUp === 2) 
+         {
+         classType = "admin-box-red";
+         }
+       else if (Class.signedUp === 1) 
+         {
+         classType = "admin-box-yellow";
+         } 
+       else 
+         {
+         classType = "admin-box-green";
+         }
+       } 
+ 
  if (userRole === 1 && showInfo === "attendance")
      {
      if (Class.attendance === 2) 

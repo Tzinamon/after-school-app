@@ -40,7 +40,7 @@ function App() {
         
       }
 
-    const [showInfo, setShowInfo] = useState("collection");
+    const [showInfo, setShowInfo] = useState("");
 
     function displayData(type){
       setShowInfo(type);
