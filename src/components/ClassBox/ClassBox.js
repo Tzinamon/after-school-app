@@ -15,17 +15,19 @@ function ClassBox({ Class, userRole , showInfo}) {
     else if (Class.participantName === "עידו") 
       {
       classType = "user-box-child2";
-      } else 
-        {
-        classType = "user-box";
-        }
-      } 
-    else if (userRole === 1 && showInfo === "collection")
+      }
+    else 
+      {
+      classType = "user-box";
+      }
+    } 
+
+  if (userRole === 1 && showInfo === "collection")
      {
       if (Class.Collection === 2) 
-         {
+        {
         classType = "admin-box-red";
-         }
+        }
       else if (Class.Collection === 1) 
         {
         classType = "admin-box-yellow";
@@ -35,36 +37,37 @@ function ClassBox({ Class, userRole , showInfo}) {
         classType = "admin-box-green";
         }
       } 
-    else if (userRole === 1 && showInfo === "signup")
+  if (userRole === 1 && showInfo === "signup")
      {
       if (Class.signedUp === 2) 
-         {
-          classType = "admin-box-red";
-         }
+        {
+        classType = "admin-box-red";
+        }
       else if (Class.signedUp === 1) 
-         {
+        {
         classType = "admin-box-yellow";
-         } 
+        } 
       else 
         {
         classType = "admin-box-green";
         }
      } 
-  else if (userRole === 1 && showInfo === "attendance")
+ if (userRole === 1 && showInfo === "attendance")
      {
      if (Class.attendance === 2) 
        {
         classType = "admin-box-red";
        }
-      else if (Class.attendance === 1) 
+     else if (Class.attendance === 1) 
        {
-        classType = "admin-box-yellow";
+      classType = "admin-box-yellow";
        } 
        else 
         {
         classType = "admin-box-green";
         }
     }
+  
   
     
     
